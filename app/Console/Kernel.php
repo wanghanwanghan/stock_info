@@ -24,7 +24,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('stock:get')->daily();
+        $schedule->command('stock:get')->daily()->withoutOverlapping();
     }
 
     /**
